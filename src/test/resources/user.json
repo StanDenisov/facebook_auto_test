@@ -1,0 +1,37 @@
+{
+"users": [
+  {
+    "email": "test@megogo.dev",
+    "name": "Максим",
+    "sure_name": "Максимкин",
+    "gender": "m",
+    "password": "mwm123qwer!",
+    "date": "10.10.1990"
+  },
+  {
+    "email": "test@mewgogo.dev",
+    "name": "Диана",
+    "sure_name": "Вовченкова",
+    "gender": "f",
+    "password": "mwm123qwer!",
+    "date": "10.10.1990"
+  },
+  {
+    "email": "test@meegogo.dev",
+    "name": "Richard",
+    "sure_name": "Big",
+    "gender": "m",
+    "password": "mwm123qwer!",
+    "date": "10.10.1990"
+  },
+  {
+    "email": "test@mergogo.dev",
+    "name": "Максим",
+    "sure_name": "Летунов",
+    "gender": "x",
+    "gender_type": "Helicopter",
+    "password": "mwm123qwer!",
+    "date": "10.10.1990"
+  }
+      ]
+}
