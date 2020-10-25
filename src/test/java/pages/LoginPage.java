@@ -26,8 +26,8 @@ public class LoginPage {
         this.driver = driver; }
 
     public void login() {
-        loginField.sendKeys("job@warlord.dev");
-        passwordField.sendKeys("393483Qwer");
+        loginField.sendKeys("ttezst@warlord.dev");
+        passwordField.sendKeys("mwm123Qwer");
         loginButton.click();
     }
 }

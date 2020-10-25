@@ -31,6 +31,7 @@ public class FacebookTest {
         driver.manage().window().fullscreen();
         driver.get(Conf.getProperty("page"));
         registrationPage.registration(1);
+        driver.close();
     }
 
 

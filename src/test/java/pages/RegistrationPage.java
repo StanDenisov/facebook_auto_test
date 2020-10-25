@@ -27,13 +27,13 @@ public class RegistrationPage {
     @FindBy(xpath = "//*[@id=\"u_1_d\"]")
     private WebElement  lastNameField;
 
-    @FindBy(xpath = "//*[@id=\"u_1_4\"]")
+    @FindBy(xpath = "/html/body/div[3]/div[2]/div/div/div[2]/div/div/div[1]/form/div[1]/div[7]/span/span[2]")
     private WebElement  genderMaleRadio;
 
     @FindBy(xpath = "/html/body/div[3]/div[2]/div/div/div[2]/div/div/div[1]/form/div[1]/div[7]/span/span[1]")
     private WebElement  genderFemaleRadio;
 
-    @FindBy(xpath = "//*[@id=\"u_1_6\"]")
+    @FindBy(xpath = "/html/body/div[3]/div[2]/div/div/div[2]/div/div/div[1]/form/div[1]/div[7]/span/span[3]")
     private WebElement  genderAnotherRadio;
 
     @FindBy(xpath = "//*[@id=\"u_1_j\"]")
