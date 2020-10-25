@@ -73,6 +73,8 @@ public class RegistrationPage {
     public void registration(int userID) throws InterruptedException {
         var user = Conf.getUsersJson().get(userID);
         System.out.println(user.toString());
+        var wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(registrationButton));
         registrationButton.click();
         System.out.println("Sleep begin");
         Thread.sleep(2000);
