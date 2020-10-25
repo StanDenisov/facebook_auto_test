@@ -9,9 +9,9 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Properties;
 
-public class ConfProperties {
-    protected static Properties PROPERTIES;
-    protected static ArrayList<User> USERS;
+public class Conf {
+    private static Properties PROPERTIES;
+    private static ArrayList<User> USERS;
     static {
         try (FileInputStream fileInputStream = new FileInputStream("src/test/resources/conf.properties")) {
             PROPERTIES = new Properties();
@@ -36,7 +36,7 @@ public class ConfProperties {
     public static String getProperty(String key) {
         return PROPERTIES.getProperty(key);
     }
-    public static ArrayList<User> ParseUserJson() {
+    public static ArrayList<User> getUsersJson() {
         return USERS;
     }
 }

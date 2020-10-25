@@ -1,37 +1,35 @@
-{
-"users": [
+[
   {
     "email": "test@megogo.dev",
     "name": "Максим",
-    "sure_name": "Максимкин",
+    "last_name": "Максимкин",
     "gender": "m",
-    "password": "mwm123qwer!",
-    "date": "10.10.1990"
+    "password": "mwm123Qwer",
+    "birthday_date": "2012-04-23T18:25:43.511Z"
   },
   {
-    "email": "test@mewgogo.dev",
+    "email": "ttezst@warlord.dev",
     "name": "Диана",
-    "sure_name": "Вовченкова",
+    "last_name": "Вовченкова",
     "gender": "f",
-    "password": "mwm123qwer!",
-    "date": "10.10.1990"
+    "password": "mwm123Qwer",
+    "birthday_date": "1992-04-23T18:25:43.511Z"
   },
   {
-    "email": "test@meegogo.dev",
+    "email": "test@mgovard.com",
     "name": "Richard",
-    "sure_name": "Big",
+    "last_name": "Big",
     "gender": "m",
     "password": "mwm123qwer!",
-    "date": "10.10.1990"
+    "birthday_date": "2012-04-23T18:25:43.511Z"
   },
   {
     "email": "test@mergogo.dev",
     "name": "Максим",
-    "sure_name": "Летунов",
+    "last_name": "Летунов",
     "gender": "x",
     "gender_type": "Helicopter",
     "password": "mwm123qwer!",
-    "date": "10.10.1990"
+    "birthday_date": "2012-04-23T18:25:43.511Z"
   }
-      ]
-}
+]
