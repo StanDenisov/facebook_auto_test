@@ -22,17 +22,20 @@ public class LoginPage {
     @FindBy(xpath = "//*[@id=\"u_0_b\"]")
     private WebElement  loginButton;
 
+    @FindBy(xpath = "//*[@id=\"checkpointBottomBar\"]/div[1]")
+    private WebElement downloadInformation;
+
     private WebDriver driver;
 
     public LoginPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
         this.driver = driver; }
 
-    public void login() {
-        var wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(loginField));
-        loginField.sendKeys("ttezst@warlord.dev");
-        passwordField.sendKeys("mwm123Qwer");
+    public void login(int userID) {
+        var user = Conf.getUsersJson().get(userID);
+        loginField.sendKeys(user.getEmail());
+        passwordField.sendKeys(user.getPassword());
         loginButton.click();
+        downloadInformation.isDisplayed();
     }
 }

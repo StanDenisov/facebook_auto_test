@@ -9,6 +9,8 @@ import org.testng.annotations.Test;
 import pages.LoginPage;
 import pages.RegistrationPage;
 
+import java.util.concurrent.TimeUnit;
+
 import static io.qameta.allure.Allure.step;
 
 public class FoxFacebookTest {
@@ -23,6 +25,7 @@ public class FoxFacebookTest {
     @BeforeMethod
     public void beforeMethodInit() {
         driver = new FirefoxDriver();
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
     @AfterMethod
@@ -31,20 +34,20 @@ public class FoxFacebookTest {
     }
 
 
-    @Test
-    public void foxRegistration() throws InterruptedException {
+    @Test(priority = 1)
+    public void foxRegistration() {
         step("fox registration");
         driver.get(Conf.getProperty("page"));
         RegistrationPage registrationPage = new RegistrationPage(driver);
-        registrationPage.registration(1);
+        registrationPage.registration(0);
     }
 
 
-    @Test
+    @Test(priority = 2)
     public void foxLogin() {
         step("fox login");
         driver.get(Conf.getProperty("page"));
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.login();
+        loginPage.login(0);
     }
 }

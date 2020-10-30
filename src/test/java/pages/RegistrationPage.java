@@ -63,6 +63,11 @@ public class RegistrationPage {
     @FindBy(xpath = "//*[@id=\"u_0_2\"]")
     private WebElement registrationButton;
 
+    @FindBy(xpath = "//*[@id=\"content\"]/div/div[1]/div/div[1]")
+    private WebElement updateInformationDiv;
+
+
+
     private WebDriver driver;
 
     public RegistrationPage(WebDriver driver) {
@@ -70,20 +75,13 @@ public class RegistrationPage {
         this.driver = driver;
     }
 
-    public void registration(int userID) throws InterruptedException {
+    public void registration(int userID) {
         var user = Conf.getUsersJson().get(userID);
-        System.out.println(user.toString());
-        var wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(registrationButton));
         registrationButton.click();
-        System.out.println("Sleep begin");
-        Thread.sleep(2000);
-        System.out.println("Sleep end");
         emailField.sendKeys(user.getEmail());
         nameField.sendKeys(user.getName());
         lastNameField.sendKeys(user.getLastName());
         passwordField.sendKeys(user.getPassword());
-        Thread.sleep(2000);
         againEmailField.sendKeys(user.getEmail());
         switch (user.getGender()) {
             case "m":
@@ -108,5 +106,7 @@ public class RegistrationPage {
         Select birthdayDaySelect = new Select(birthdayDateDayField);
         birthdayDaySelect.selectByValue(String.valueOf(cal.get(Calendar.DAY_OF_MONTH)));
         registrationCompleteButton.click();
+        updateInformationDiv.isDisplayed();
+
     }
 }
